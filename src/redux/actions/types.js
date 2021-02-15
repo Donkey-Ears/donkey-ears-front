@@ -1,0 +1,8 @@
+// login
+export const LOGIN = "LOGIN";
+export const LOGIN_ON_CHANGE_USERNAME = "LOGIN/ON_CHANGE_USERNAME";
+export const LOGIN_ON_CHANGE_PASSWORD = "LOGIN/ON_CHANGE_PASSWORD";
+export const LOGIN_CHANGE_USER_INFO = "LOGIN/CHANGE_USER_INFO";
+
+// shout
+export const SHOUT_LIST = "SHOUT_LIST"; 

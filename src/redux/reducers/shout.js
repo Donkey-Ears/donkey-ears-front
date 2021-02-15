@@ -4,7 +4,7 @@ const initialState = {
     shoutList: []
 }
 
-export const login = (state = initialState, action) => {
+export const shout = (state = initialState, action) => {
     switch (action.type) {
         case SHOUT_LIST:
             state.shoutList = action.payload.shoutList

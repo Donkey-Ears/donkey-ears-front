@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Card, CardBody } from 'reactstrap';
+import { getShout } from "../redux/actions/shout"
 
 const shoutStyle = {
     borderTop: "none",
@@ -9,6 +11,9 @@ const shoutStyle = {
     borderRadius: "0"
 }
 class Home extends Component {
+    componentDidMount() {
+        this.props.getShout()
+    }
     render() {
         return (
             <>
@@ -34,4 +39,13 @@ class Home extends Component {
     }
 }
 
-export default Home;
+
+const mapDispatchToProps = (state) => {
+    return {
+        shoutList: state.shout.shoutList
+    }
+}
+
+export default connect(mapDispatchToProps, {
+    getShout,
+})(Home)
